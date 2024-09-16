@@ -1,0 +1,151 @@
+/* Basic Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+.navbar {
+    background-color: #343a40;
+    color: white;
+    padding: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 999; /* Ensures the navbar stays on top of other elements */
+    height: 69px;
+}
+
+.navbar-toggler {
+    font-size: 1.5rem;
+    color: white;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+.navbar-brand {
+    font-size: 1.25rem;
+    font-weight: bold;
+}
+
+/* Offcanvas Styles */
+.offcanvas {
+    position: fixed;
+    top: 0;
+    left: -300px;
+    width: 300px;
+    height: 100%;
+    background-color: #343a40;
+    color: white;
+    transition: left 0.3s ease;
+    z-index: 1000;
+    padding: 1rem;
+}
+
+.offcanvas.open {
+    left: 0;
+}
+
+.offcanvas-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid #495057;
+}
+
+.btn-close {
+    font-size: 1.5rem;
+    color: white;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+.offcanvas-body {
+    padding-top: 1rem;
+}
+
+.navbar-nav {
+    list-style-type: none;
+}
+
+.nav-item {
+    margin-bottom: 1rem;
+}
+
+.nav-link {
+    text-decoration: none;
+    color: white;
+    font-size: 1.1rem;
+    display: block;
+    padding: 0.5rem;
+    transition: background-color 0.3s ease;
+}
+
+.nav-link:hover {
+    background-color: #495057;
+    border-radius: 5px;
+}
+
+/* Dropdown */
+.dropdown {
+    list-style-type: none;
+    padding-left: 1rem;
+    display: none;
+}
+
+.nav-link.dropdown-toggle:hover + .dropdown {
+    display: block;
+}
+
+.dropdown-item {
+    color: white;
+    padding: 0.5rem;
+    text-decoration: none;
+    display: block;
+    transition: background-color 0.3s ease;
+}
+
+.dropdown-item:hover {
+    background-color: #495057;
+}
+
+/* Search Form */
+.search-form {
+    margin-top: 2rem;
+}
+
+.search-input {
+    width: 100%;
+    padding: 0.5rem;
+    margin-bottom: 0.5rem;
+    border: none;
+    border-radius: 5px;
+}
+
+.search-button {
+    width: 100%;
+    padding: 0.5rem;
+    background-color: #28a745;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    cursor: pointer;
+}
+
+.search-button:hover {
+    background-color: #218838;
+}
+
+/* Utility Classes */
+.container-fluid {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}

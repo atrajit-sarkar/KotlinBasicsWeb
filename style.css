@@ -1,0 +1,163 @@
+@import url('https://fonts.googleapis.com/css2?family=Foldit:wght@100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Foldit:wght@100..900&family=VT323&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Edu+AU+VIC+WA+NT+Hand:wght@400..700&family=Foldit:wght@100..900&family=VT323&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Edu+AU+VIC+WA+NT+Hand:wght@400..700&family=Foldit:wght@100..900&family=Kalnia+Glaze:wght@100..700&family=VT323&display=swap');
+
+/* Global Styles */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f9;
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+
+.header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 10px;
+    font-family: "Kalnia Glaze", serif;
+    font-optical-sizing: auto;
+    font-weight: 600;
+    font-style: normal;
+    font-variation-settings:
+        "wdth" 100;
+    font-size: 40px;
+    background-color: #ecc6ec;
+    color: white;
+    padding: 1rem;
+    position: sticky;
+    top: 0;
+    z-index: 999;
+    /* Ensures the navbar stays on top of other elements */
+    height: 69px;
+    box-shadow: 0 7px 8px rgba(0, 0, 0, 0.1);
+
+}
+
+.container {
+    margin-top: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.folder-name {
+    font-family: "VT323", monospace;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 40px;
+    border-radius: 5px;
+    padding: 10px;
+    background-color: rgb(234, 230, 123);
+    transition: transform 0.3s ease-in-out;
+    box-shadow: 0 7px 8px rgba(0, 0, 0, 0.1);
+}
+
+.folder-name:hover {
+    background-color: rgb(162, 235, 162);
+    animation: ease-out;
+    transform: translateY(-10px);
+}
+
+/* Container */
+.sub-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: stretch;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    padding: 20px;
+    max-width: 780px;
+    margin: 0 auto;
+    margin-top: 8px;
+}
+
+/* Box */
+.box {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    transition: transform 0.3s ease-in-out;
+    text-align: center;
+    width: 330px;
+}
+
+.box:hover {
+    transform: translateY(-10px);
+}
+
+/* Document Description */
+.document-description {
+    font-size: 16px;
+    color: #666;
+    margin-bottom: 15px;
+    font-style: italic;
+}
+
+/* Document Links */
+a {
+    display: inline-block;
+    margin: 5px 0;
+    text-decoration: none;
+    color: #007bff;
+    font-weight: bold;
+    border: 2px solid #007bff;
+    padding: 10px 15px;
+    border-radius: 25px;
+    transition: background-color 0.3s, color 0.3s, border-color 0.3s;
+}
+
+a:hover {
+    background-color: #007bff;
+    color: #fff;
+    border-color: #0056b3;
+}
+
+/* Document Title */
+.doc-title {
+    margin-top: 15px;
+    font-size: 18px;
+    font-weight: bold;
+    color: #333;
+    text-transform: uppercase;
+    font-family: "Edu AU VIC WA NT Hand", cursive;
+    font-optical-sizing: auto;
+    font-weight: 700;
+    font-style: normal;
+}
+
+/* Preview Container Styles */
+.preview-container {
+    position: relative;
+    display: inline-block;
+}
+
+.preview-container .preview-content {
+    display: none;
+    position: absolute;
+    /* bottom: 100%; */
+    top: 120%;
+    /* Show above the link */
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #fff;
+    border: 1px solid #ccc;
+    padding: 10px;
+    width: 200px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.preview-container:hover .preview-content {
+    display: block;
+}
+
+iframe {
+    width: 300px;
+    height: 240px;
+    border: none;
+}
